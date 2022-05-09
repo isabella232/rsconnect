@@ -193,6 +193,8 @@ streamApplicationLogs <- function(authInfo, applicationId, entries, skip) {
 #'   if only one application deployment was made from `appPath`.
 #' @param account The account under which the application was deployed. May be
 #'   omitted if only one account is registered on the system.
+#' @param server Server name. Required only if you use the same account name on
+#'   multiple servers.
 #' @param entries The number of log entries to show. Defaults to 50 entries.
 #' @param streaming Whether to stream the logs. If `TRUE`, then the
 #'   function does not return; instead, log entries are written to the console
