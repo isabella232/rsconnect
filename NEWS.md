@@ -10,6 +10,7 @@
 * Added `quarto` parameter to `deployApp` to enable deploying Quarto documents
   and websites by supplying the path to a Quarto executable
 * Added support for deploying Quarto content that uses only the `jupyter` runtime
+* The `showLogs` function takes a `server` parameter. (#57)
 
 ## 0.8.25
 

@@ -203,11 +203,11 @@ streamApplicationLogs <- function(authInfo, applicationId, entries, skip) {
 #'
 #' @export
 showLogs <- function(appPath = getwd(), appFile = NULL, appName = NULL,
-                     account = NULL, entries = 50, streaming = FALSE) {
+                     account = NULL, server = NULL, entries = 50, streaming = FALSE) {
 
   # determine the log target and target account info
-  target <- deploymentTarget(appPath, appName, NULL, NULL, account)
-  accountDetails <- accountInfo(target$account)
+  target <- deploymentTarget(appPath, appName, NULL, NULL, account, server)
+  accountDetails <- accountInfo(target$account, target$server)
   client <- lucidClient(shinyappsServerInfo()$url, accountDetails)
   application <- getAppByName(client, accountDetails, target$appName)
   if (is.null(application))
